@@ -41,4 +41,29 @@ public class Tests
         var result = Decryption.Decrypt(cipherText, key);
         Assert.That(result, Is.EqualTo(expected));
     }
+
+    [TestCase("hello world", "gcsohmrgmslohtsrgv")]
+    [TestCase("something", "megszentsegtelenithetetlensegeskedeseitekert")]
+    [TestCase("a quick brown fox jumps over the lazy dog",
+        "abacabadabacabaeabacabadabacabafabacabadabacabaeabacabadabacaba")]
+    public void TestBackAndForth(string plainText, string key)
+    {
+        var encrypted = Encryption.Encrypt(plainText, key);
+        var decrypted = Decryption.Decrypt(encrypted, key);
+        Assert.That(decrypted, Is.EqualTo(plainText));
+    }
+
+    [TestCase("abc", "ab")]
+    [TestCase("Abc", "abc")]
+    public void TestExceptionEncryption(string plainText, string key)
+    {
+        Assert.Throws<ArgumentOutOfRangeException>(() => Encryption.Encrypt(plainText, key));
+    }
+
+    [TestCase("abc", "ab")]
+    [TestCase("Abc", "abc")]
+    public void TestExceptionDecryption(string plainText, string key)
+    {
+        Assert.Throws<ArgumentOutOfRangeException>(() => Decryption.Decrypt(plainText, key));
+    }
 }
