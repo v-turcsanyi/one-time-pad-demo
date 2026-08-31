@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
         const string plaintext = "helloworld";
-        const string key = "abcdefghijkl";
+        const string key = "abcdefgijkl";
         var ciphertext = Encryption.Encrypt(plaintext, key);
         Console.Write("Plain text: ");
         Console.WriteLine(plaintext);
