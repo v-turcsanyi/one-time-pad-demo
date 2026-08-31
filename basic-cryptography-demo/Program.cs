@@ -1,4 +1,4 @@
-﻿namespace enigma_demo;
+﻿namespace basic_cryptography_demo;
 
 class Program
 {

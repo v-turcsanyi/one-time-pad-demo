@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>net10.0</TargetFramework>
-        <RootNamespace>enigma_demo_tests</RootNamespace>
+        <RootNamespace>basic_cryptography_demo_tests</RootNamespace>
         <LangVersion>latest</LangVersion>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
@@ -22,7 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\enigma-demo\enigma-demo.csproj" />
+      <ProjectReference Include="..\basic-cryptography-demo\basic-cryptography-demo.csproj" />
     </ItemGroup>
 
 </Project>

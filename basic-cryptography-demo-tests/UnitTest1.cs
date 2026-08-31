@@ -1,5 +1,5 @@
-﻿namespace enigma_demo_tests;
-using enigma_demo;
+﻿namespace basic_cryptography_demo_tests;
+using basic_cryptography_demo;
 
 public class Tests
 {
