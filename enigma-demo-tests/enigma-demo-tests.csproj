@@ -21,4 +21,8 @@
         <Using Include="NUnit.Framework"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\enigma-demo\enigma-demo.csproj" />
+    </ItemGroup>
+
 </Project>
