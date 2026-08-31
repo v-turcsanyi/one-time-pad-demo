@@ -26,7 +26,7 @@ public static class Common
 
     public static char index_to_character(int c)
     {
-        char result = '?';
+        var result = '?';
         if (c > 26 || c < 0)
         {
             throw new ArgumentOutOfRangeException();

@@ -9,15 +9,15 @@ public static class Encryption
         {
             throw new ArgumentOutOfRangeException();
         }
-        char[] result = new char[plainText.Length];
-        for (int current_index = 0; current_index < plainText.Length; current_index++)
+        var result = new char[plainText.Length];
+        for (var currentIndex = 0; currentIndex < plainText.Length; currentIndex++)
         {
-            int new_index = character_to_index(plainText[current_index]);
-            new_index += character_to_index(key[current_index]);
-            new_index = new_index % 27;
-            result[current_index] = index_to_character(new_index);
+            var newIndex = character_to_index(plainText[currentIndex]);
+            newIndex += character_to_index(key[currentIndex]);
+            newIndex = newIndex % 27;
+            result[currentIndex] = index_to_character(newIndex);
         }
-        string result_string = new string(result);
-        return result_string;
+        var resultString = new string(result);
+        return resultString;
     }
 }
