@@ -1,8 +1,8 @@
 namespace basic_cryptography_demo;
 
-public static class dictionary
+public static class WordDictionary
 {
-    public static readonly string[] words =
+    public static readonly string[] Words =
     [
         "a",
         "abandon",

@@ -35,13 +35,19 @@ class Program
         Console.WriteLine("Key candidates:");
         foreach (var candidate in keys)
         {
-            Console.Write("- Key: ");
-            Console.WriteLine(candidate);
-            Console.Write("- Plain text 1: ");
-            Console.WriteLine(Decryption.Decrypt(ciphertext1, candidate));
-            Console.Write("- Plain text 2: ");
-            Console.WriteLine(Decryption.Decrypt(ciphertext2, candidate));
+            /*try
+            {*/
+                Console.Write("- Key: ");
+                Console.WriteLine(candidate);
+                Console.Write("- Plain text 1: ");
+                Console.WriteLine(Decryption.Decrypt(ciphertext1, candidate));
+                Console.Write("- Plain text 2: ");
+                Console.WriteLine(Decryption.Decrypt(ciphertext2, candidate));
+                Console.WriteLine("--------------------");
+            /*}catch (ArgumentOutOfRangeException)
+            {
+                
+            }*/
         }
-        Console.WriteLine("----------");
     }
 }
