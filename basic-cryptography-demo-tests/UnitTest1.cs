@@ -68,7 +68,7 @@ public class Tests
     public void TestAttack(string plainText1, string plainText2, string key, string known)
     {
         var encrypted1 = Encryption.Encrypt(plainText1, key);
-        var encrypted2 = Encryption.Encrypt(encrypted1, key);
+        var encrypted2 = Encryption.Encrypt(plainText2, key);
         string[] encryptedArray = [encrypted1, encrypted2];
         var keys = Attack.AttackSameKey(encryptedArray, known);
         foreach (var candidate in keys)
