@@ -16,13 +16,13 @@ public static class Attack
         var candidates = new List<string>();
         foreach (var item in messagesKnown)
         {
-            PrefixDepth(depth);
-            Console.WriteLine(item);
+            // PrefixDepth(depth);
+            // Console.WriteLine(item);
         }
-        PrefixDepth(depth);
-        Console.WriteLine("---");
-        PrefixDepth(depth);
-        Console.WriteLine(key);
+        // PrefixDepth(depth);
+        // Console.WriteLine("---");
+        // PrefixDepth(depth);
+        // Console.WriteLine(key);
 
         var keyKnown = new List<char>();
         int index = 0;
@@ -51,14 +51,14 @@ public static class Attack
             return candidates.ToArray();
         }
 
-        PrefixDepth(depth);
-        Console.WriteLine("---");
-        PrefixDepth(depth);
-        foreach (var item in keyKnown)
-        {
-            Console.Write(item);
-        }
-        Console.WriteLine();
+        // PrefixDepth(depth);
+        // Console.WriteLine("---");
+        // PrefixDepth(depth);
+        // foreach (var item in keyKnown)
+        // {
+            // Console.Write(item);
+        // }
+        // Console.WriteLine();
 
         var keyKnownRender = new List<char>();
         foreach (var c in keyKnown)
@@ -69,20 +69,20 @@ public static class Attack
         {
             keyKnownRender.Add('a'); // pad the reconstructed key for rendering
         }
-        PrefixDepth(depth);
-        Console.WriteLine("---");
+        // PrefixDepth(depth);
+        // Console.WriteLine("---");
         var keyKnownStr = string.Concat(keyKnownRender.ToArray());
         var messagesDecrypted = new string[messagesOriginal.Length];
         for (var i = 0; i < messagesOriginal.Length; i++)
         {
             var item = messagesOriginal[i];
             messagesDecrypted[i] = Decryption.Decrypt(item, keyKnownStr);
-            PrefixDepth(depth);
-            Console.WriteLine(messagesDecrypted[i]);
+            // PrefixDepth(depth);
+            // Console.WriteLine(messagesDecrypted[i]);
         }
         
-        PrefixDepth(depth);
-        Console.WriteLine("---");
+        // PrefixDepth(depth);
+        // Console.WriteLine("---");
 
         var candidatesWord2 = new List<string>();
         foreach (var word in WordDictionary.Words)
@@ -113,8 +113,8 @@ public static class Attack
 
             if (found)
             {
-                PrefixDepth(depth);
-                Console.WriteLine(word);
+                // PrefixDepth(depth);
+                // Console.WriteLine(word);
                 candidatesWord2.Add(word);
             }
         }
@@ -122,9 +122,9 @@ public static class Attack
         {
             try
             {
-                PrefixDepth(depth);
-                Console.Write(candidate);
-                Console.WriteLine(" <---");
+                // PrefixDepth(depth);
+                // Console.Write(candidate);
+                // Console.WriteLine(" <---");
                 var messagesKnownNew = new string[2];
                 var messagesOriginalNew = new string[2];
                 messagesKnownNew[1] = messagesKnown[0];
