@@ -60,6 +60,13 @@ public class Tests
         Assert.Throws<ArgumentOutOfRangeException>(() => Encryption.Encrypt(plainText, key));
     }
 
+    [TestCase("abc", "ab")]
+    [TestCase("Abc", "abc")]
+    public void TestExceptionDecryption(string plainText, string key)
+    {
+        Assert.Throws<ArgumentOutOfRangeException>(() => Decryption.Decrypt(plainText, key));
+    }
+
     [TestCase(
         "early bird catches the worm",
         "curiosity killed the cat",
