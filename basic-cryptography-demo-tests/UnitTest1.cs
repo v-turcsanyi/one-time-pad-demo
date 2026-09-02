@@ -60,10 +60,28 @@ public class Tests
         Assert.Throws<ArgumentOutOfRangeException>(() => Encryption.Encrypt(plainText, key));
     }
 
-    [TestCase("abc", "ab")]
-    [TestCase("Abc", "abc")]
-    public void TestExceptionDecryption(string plainText, string key)
+    [TestCase(
+        "early bird catches the worm",
+        "curiosity killed the cat",
+        "a quick brown fox jumps over the lazy dog",
+        "early")]
+    public void TestAttack(string plainText1, string plainText2, string key, string known)
     {
-        Assert.Throws<ArgumentOutOfRangeException>(() => Decryption.Decrypt(plainText, key));
+        var encrypted1 = Encryption.Encrypt(plainText1, key);
+        var encrypted2 = Encryption.Encrypt(encrypted1, key);
+        string[] encryptedArray = [encrypted1, encrypted2];
+        var keys = Attack.AttackSameKey(encryptedArray, known);
+        foreach (var candidate in keys)
+        {
+            if
+            (
+                Decryption.Decrypt(encrypted1, candidate) == plainText1 &&
+                Decryption.Decrypt(encrypted2, candidate) == plainText2
+            )
+            {
+                Assert.Pass();
+            }
+        }
+        Assert.Fail();
     }
 }
