@@ -28,6 +28,22 @@ public class Tests
         Assert.That(result, Is.EqualTo(expected));
     }
 
+    [TestCase('A')]
+    [TestCase('á')]
+    [TestCase('?')]
+    public void TestExceptionCharToIndex(char c)
+    {
+        Assert.Throws<ArgumentOutOfRangeException>(() => Common.character_to_index(c));
+    }
+
+    [TestCase('A')]
+    [TestCase('á')]
+    [TestCase('?')]
+    public void TestExceptionIndexToChar(char c)
+    {
+        Assert.Throws<ArgumentOutOfRangeException>(() => Common.index_to_character(c));
+    }
+
     [TestCase("helloworld", "abcdefgijkl", "hfnosauzun")]
     public void TestEncrypt(string plainText, string key, string expected)
     {
