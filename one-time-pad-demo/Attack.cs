@@ -2,14 +2,14 @@ namespace one_time_pad_demo;
 
 public static class Attack
 {
-    private static void PrefixDepth(int depth)
+    /*private static void PrefixDepth(int depth)
     {
         for (int i = 0; i < depth + 1; i++)
         {
             Console.Write(i);
             Console.Write(" ");
         }
-    }
+    }*/
 
     private static string[] AttackSubString(string[] messagesKnown, string[] messagesOriginal, string key, int depth)
     {
