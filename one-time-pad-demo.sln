@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "basic-cryptography-demo", "basic-cryptography-demo\basic-cryptography-demo.csproj", "{6248A256-9B10-4D7A-B0B9-8FF300FC414C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "one-time-pad-demo", "one-time-pad-demo\one-time-pad-demo.csproj", "{6248A256-9B10-4D7A-B0B9-8FF300FC414C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "basic-cryptography-demo-tests", "basic-cryptography-demo-tests\basic-cryptography-demo-tests.csproj", "{0501BD82-10DA-472D-A9B2-FCBFA9F59367}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "one-time-pad-demo-tests", "one-time-pad-demo-tests\one-time-pad-demo-tests.csproj", "{0501BD82-10DA-472D-A9B2-FCBFA9F59367}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

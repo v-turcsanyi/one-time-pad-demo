@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>net10.0</TargetFramework>
-        <RootNamespace>basic_cryptography_demo_tests</RootNamespace>
+        <RootNamespace>one_time_pad_demo_tests</RootNamespace>
         <LangVersion>latest</LangVersion>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
@@ -22,7 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\basic-cryptography-demo\basic-cryptography-demo.csproj" />
+      <ProjectReference Include="..\one-time-pad-demo\one-time-pad-demo.csproj" />
     </ItemGroup>
 
 </Project>

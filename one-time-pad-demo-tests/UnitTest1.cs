@@ -1,5 +1,5 @@
-﻿namespace basic_cryptography_demo_tests;
-using basic_cryptography_demo;
+﻿namespace one_time_pad_demo_tests;
+using one_time_pad_demo;
 
 public class Tests
 {

@@ -1,4 +1,4 @@
-namespace basic_cryptography_demo;
+namespace one_time_pad_demo;
 
 public static class WordDictionary
 {

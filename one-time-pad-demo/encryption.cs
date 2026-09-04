@@ -1,4 +1,4 @@
-namespace basic_cryptography_demo;
+namespace one_time_pad_demo;
 
 using static Common;
 public static class Encryption
